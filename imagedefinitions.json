@@ -1,0 +1,21 @@
+{
+  "taskDefinition": {
+    "family": "cat-site",
+    "containerDefinitions": [
+      {
+        "name": "cat-site",
+        "image": "170142860215.dkr.ecr.ap-southeast-2.amazonaws.com/cat-site:latest",
+        "cpu": 100,
+        "portMappings": [
+          {
+            "protocol": "tcp",
+            "containerPort": 80,
+            "hostPort": 80
+          }
+        ],
+        "memory": 128,
+        "essential": true
+      }
+    ]
+  }
+}
