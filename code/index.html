@@ -1,0 +1,28 @@
+<center>Ask not for whom the cat meows. It meows for thee</center>
+<script type="text/javascript">
+<!--
+ var imlocation = "images/";
+ var currentdate = 0;
+ var image_number = 0;
+ function ImageArray (n) {
+   this.length = n;
+   for (var i =1; i <= n; i++) {
+     this[i] = ' '
+   }
+ }
+ image = new ImageArray(5)
+ image[0] = 'cat1.jpg'
+ image[1] = 'cat2.jpg'
+ image[2] = 'cat3.jpg'
+ image[3] = 'cat4.jpg'
+ image[4] = 'cat5.jpg'
+ var rand = 60/image.length
+ function randomimage() {
+ 	currentdate = new Date()
+ 	image_number = currentdate.getSeconds()
+ 	image_number = Math.floor(image_number/rand)
+ 	return(image[image_number])
+ }
+ document.write("<img src='" + imlocation + randomimage()+ "'>");
+//-->
+</script>
